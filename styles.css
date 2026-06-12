@@ -5,11 +5,24 @@ html, body {
 }
 
 body {
+    font-family: 'Google Sans';
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "GRAD" 0;
+}
+
+body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 4fr;
-    font-family: "Roboto", sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
 }
 
 .sidebar {
@@ -191,7 +204,121 @@ body {
     background-color: #FFFFFF;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 4fr 1fr 1fr 1fr;
+    grid-template-columns: 6fr 1fr 1fr 1fr;
+}
+
+.search {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-left: 40px;
+}
+
+.search-bar {
+    background-color: #E2E8F0;
+    border-color: #E2E8F0;
+    border-style: solid;
+    height: 30px;
+    flex: 2;
+    border-radius: 50px;
+    outline: none;
+    padding-left: 15px;
+}
+
+.search-bar:focus {
+    border-color: lightgray;
+}
+
+.notifications {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.account {
+    grid-area: 1 / 3 / 2 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.account-logo > img {
+    height: 40px;
+    width: 40px;
+}
+
+.account-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.greetings {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 40px;
+    gap: 20px;
+}
+
+.greetings > .account-logo > img {
+    height: 70px;
+    width: 70px;
+}
+
+.greetings-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.greetings-text > p {
+    margin: 0;
+}
+
+.greetings-text > p:first-child {
+    font-weight: 500;
+    font-size: small;
+}
+
+.greetings-text > p:nth-child(2) {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.new {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.upload {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.share {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.new, .upload, .share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+button {
+    background-color: #1992D4;
+    border: none;
+    flex: 1;
+    height: 70%;
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-weight: 1000;
 }
 
 .main-content {
